@@ -1,11 +1,17 @@
 package com.company;
+import com.company.ejercicio1.Autor;
+import com.company.ejercicio1.Libro;
+import com.company.ejercicio2.Factura;
+import com.company.ejercicio2.ItemVenta;
+import com.company.ejercicio3.Cliente;
+import com.company.ejercicio3.Cuenta;
 
 public class Main {
 
     public static void main(String[] args) {
 
-
-
+    //EJERCICIO 1///
+    /*
         //Instancio objeto autor y lo muestro
         Autor miAutor = new Autor();
         miAutor.Autor("Joshua", "Bloch", "Joshua@email.com", 'M');
@@ -45,6 +51,63 @@ public class Main {
 		miLibro.mostrarAutores();
 		//Mensaje del objeto libro
 		miLibro.mensaje();
+    */
+/*
+        //EJERCICIO 2///
+
+        ///Instancio objeto cliente
+
+        Cliente miCliente = new Cliente();
+        miCliente.Cliente("Iribarne Agustin","iri123@gmail.com",0.10);
+        miCliente.mostrarCliente();
+
+        ///Instancio 2 objetos Items
+        ItemVenta item1 = new ItemVenta();
+        ItemVenta item2 = new ItemVenta();
+        ItemVenta item3 = new ItemVenta();
+        item1.ItemVenta("Guitarra","Stratocaster 1959",5000);
+        item2.ItemVenta("Amplificador","Marshall cellestion 100w",5000);
+        item3.ItemVenta("Pedal distorsion","BOSS DS1",2000);
+
+        ///Creo array de items
+        ItemVenta[] items = new ItemVenta[3];
+        items[0] = item1;
+        items[1] = item2;
+        items[2] = item3;
+
+        ///Creo objeto factura
+        Factura miFactura = new Factura();
+        miFactura.Factura(miCliente,items,3);
+        miFactura.mostrarFactura();
+*/
+
+        ///EJERCICIO 3
+
+        Cliente miCliente = new Cliente("Iribarne Agustin",'M');
+        miCliente.mostrarCliente();
+        Cuenta miCuenta = new Cuenta(miCliente,10000);
+       // miCuenta.extraer(11000);
+        //miCuenta.extraer(11000);
+        miCuenta.depositar(4000);
+        miCuenta.depositar(5000);
+        miCuenta.depositar(10000);
+        miCuenta.extraer(5000);
+        miCuenta.extraer(100);
+        miCuenta.extraer(100);
+        miCuenta.extraer(100);
+        miCuenta.extraer(100);
+        miCuenta.extraer(100);
+        miCuenta.extraer(100);
+        miCuenta.depositar(3000);
+        miCuenta.mostrarHistorial();
+
+        miCuenta.mostrarCuenta();
+
+
+
+
+
+
 
 
 
